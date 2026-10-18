@@ -1,1 +1,6 @@
-./github
+.gitignore
+
+.idea/
+.vscode/
+
+*.yaml
