@@ -1,0 +1,23 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run basic checks
+        run: |
+          echo "Начинаем проверки..."
+          # Пример: проверка наличия важных файлов
+          ls -la
+          echo "Проверки успешно завершены!"
